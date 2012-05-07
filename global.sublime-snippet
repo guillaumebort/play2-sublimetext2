@@ -1,0 +1,14 @@
+<snippet>
+	<content><![CDATA[
+import play.api._
+import play.api.mvc._
+
+object Global extends GlobalSettings {
+
+  $1
+  
+}
+]]></content>
+	<tabTrigger>global</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>

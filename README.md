@@ -2,15 +2,19 @@
 
 Get the latest Sublime Text 2 beta from http://www.sublimetext.com/2.
 
-Currently supported features:
+## Currently supported features
 
-- Syntax highlighting for `*.scala.html`
-- Syntax highlighting for `routes`
+### Syntax highlighting
 
-Snippets:
+- For `*.scala.html`
+- For `*.routes`
+- For `*.conf`
 
-- `action ➝` : Create an action
+### Code snippets
 
+- `action ➝` : Creates an action
+- `controller ➝` : Creates a Controller structure
+- `global ➝` : Creates a Global object structure
 
 ## Installation instructions : 
 
@@ -31,5 +35,4 @@ Snippets:
 ### Windows XP:
 
     Copy the directory to: "C:\Documents and Settings\<username>\Application Data\Sublime Text 2\Packages"
-
 

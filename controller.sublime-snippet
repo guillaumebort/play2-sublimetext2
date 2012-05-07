@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+package controllers
+
+import play.api._
+import play.api.mvc._
+
+object ${1:Application} extends Controller {
+
+  $2
+
+}
+]]></content>
+	<tabTrigger>controller</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>

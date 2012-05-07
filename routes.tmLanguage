@@ -4,7 +4,7 @@
 <dict>
 	<key>fileTypes</key>
 	<array>
-		<string>properties</string>
+		<string>routes</string>
 	</array>
 	<key>keyEquivalent</key>
 	<string>^~P</string>
