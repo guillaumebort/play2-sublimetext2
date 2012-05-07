@@ -16,6 +16,10 @@ Get the latest Sublime Text 2 beta from http://www.sublimetext.com/2.
 - `controller ➝` : Creates a Controller structure
 - `global ➝` : Creates a Global object structure
 
+## Theme
+
+Currently optimized for the __Dawn__ theme.
+
 ## Installation instructions : 
 
 ### Mac 
