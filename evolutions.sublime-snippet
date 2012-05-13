@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+# ${1:Comment}
+
+# --- !Ups
+${2}
+
+# --- !Downs
+
+]]></content>
+    <tabTrigger>evolutions</tabTrigger>
+    <scope>source.sql</scope>
+</snippet>
