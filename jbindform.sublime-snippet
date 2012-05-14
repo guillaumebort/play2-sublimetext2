@@ -1,0 +1,13 @@
+<snippet>
+	<content><![CDATA[
+Form<${2:MyForm}> ${1:form} = form(${2:MyForm}.class);
+Form<${2:MyForm}> ${3:filledForm} = ${1:form}.bindFromRequest();
+if(${1:form}.hasErrors()) {
+    $4
+} else {
+    $5
+}		
+]]></content>
+	<tabTrigger>bindform</tabTrigger>
+	<scope>source.java</scope>
+</snippet>

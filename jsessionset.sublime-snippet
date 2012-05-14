@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+session("${3:item.key}", ${4:value});
+]]></content>
+    <tabTrigger>sessionset</tabTrigger>
+    <scope>source.java</scope>
+</snippet>
+
+
