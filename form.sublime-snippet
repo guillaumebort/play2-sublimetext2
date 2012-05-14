@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+val ${1:form} = Form( "${2:param1}" -> ${3:text} )
+]]></content>
+	<tabTrigger>form</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>
