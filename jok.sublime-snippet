@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+return ok(
+    views.html.${1:index}.render($2);
+);
+]]></content>
+    <tabTrigger>ok</tabTrigger>
+    <scope>source.java</scope>
+</snippet>

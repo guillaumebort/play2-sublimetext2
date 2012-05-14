@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+Cache.set("${1:item.key}", ${2:value});
+]]></content>
+	<tabTrigger>cacheset</tabTrigger>
+	<scope>source.java</scope>
+</snippet>

@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+public static WebSocket<${1:String}> ${2:index}() {
+    return new WebSocket<${1:String}>() {
+        public void onReady(final WebSocket.In<${1:String}> in, final WebSocket.Out<${1:String}> out) {
+            in.onMessage(new Callback<String>() {
+                public void invoke(String event) {
+                    out.write("Hello " + event);  
+                } 
+            });
+            in.onClose(new Callback0() {
+                public void invoke() {
+                    out.close();
+                }
+            });
+        }
+    }
+}
+]]></content>
+	<tabTrigger>websocket</tabTrigger>
+	<scope>source.java</scope>
+</snippet>

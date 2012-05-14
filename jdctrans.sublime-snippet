@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+Ebean.execute(new TxRunnable() {  
+    public void run() {  
+    	$1
+    }  
+});
+]]></content>
+	<tabTrigger>dbtrans</tabTrigger>
+	<scope>source.java</scope>
+</snippet>

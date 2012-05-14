@@ -1,0 +1,8 @@
+<snippet>
+    <content><![CDATA[
+session("${1:item.key}");
+]]></content>
+    <tabTrigger>sessionget</tabTrigger>
+    <scope>source.java</scope>
+</snippet>
+
