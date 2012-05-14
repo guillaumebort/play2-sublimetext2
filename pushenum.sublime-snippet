@@ -1,0 +1,16 @@
+<snippet>
+	<content><![CDATA[
+val ${1:hubEnumerator} = Enumerator.imperative[${2:String}]()
+
+val hub = Concurrent.hub[${2:String}]( hubEnumerator )
+  
+def push( ${3:msg}: ${2:String} ) = {
+    hubEnumerator.push( msg )
+}
+// consume with hub.getPatchCord()
+]]></content>
+	<tabTrigger>pushenum</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>
+
+

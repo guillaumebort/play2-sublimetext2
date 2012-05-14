@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+val maybe: Option[${1:String}] = Cache.getAs[${1:String}]("${2:item.key}")
+]]></content>
+	<tabTrigger>cacheget</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>

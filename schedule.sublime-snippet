@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+Akka.system.scheduler.schedule( 0 millisecond, ${1:10} ${2:seconds} ) {
+    $3
+}
+]]></content>
+    <tabTrigger>schedule</tabTrigger>
+    <scope>source.scala</scope>
+</snippet>
+
+

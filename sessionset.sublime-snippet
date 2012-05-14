@@ -1,0 +1,11 @@
+<snippet>
+    <content><![CDATA[
+Ok( views.html.${1:index}($2) ).withSession(
+  session + ("${3:key}" -> "${4:value}")
+)
+]]></content>
+    <tabTrigger>sessionset</tabTrigger>
+    <scope>source.scala</scope>
+</snippet>
+
+

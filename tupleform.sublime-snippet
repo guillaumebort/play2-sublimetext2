@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+val ${1:form} = Form( tuple( "${2:param1}" -> ${3:text}, "${4:param2}" -> ${5:text} ) )
+]]></content>
+	<tabTrigger>tupleform</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>
