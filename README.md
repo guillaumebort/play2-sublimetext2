@@ -15,6 +15,7 @@ Get the latest Sublime Text 2 beta from http://www.sublimetext.com/2.
 - `action ➝` : Creates an action
 - `controller ➝` : Creates a Controller structure
 - `global ➝` : Creates a Global object structure
+- `evolutions ➝` : Creates the evolution up/down tags in sql file
 
 ## Theme
 
