@@ -16,6 +16,9 @@ Get the latest Sublime Text 2 beta from http://www.sublimetext.com/2.
 - `controller ➝` : Creates a Controller structure
 - `global ➝` : Creates a Global object structure
 - `evolutions ➝` : Creates the evolution up/down tags in sql file
+- `pforeach ➝` : Creates an foreach structure in templates (html)
+- `htmlform ➝` : Creates a form in templates (html)
+- `template ➝` : Creates a html template structure (html)
 
 ## Theme
 
