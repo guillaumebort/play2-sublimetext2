@@ -1,0 +1,9 @@
+<snippet>
+    <content><![CDATA[
+@for(${1:item} <- ${2:items}) {
+	$3
+}
+]]></content>
+    <tabTrigger>pforeach</tabTrigger>
+    <scope>source.scala.html</scope>
+</snippet>

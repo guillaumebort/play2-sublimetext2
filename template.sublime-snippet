@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+@($1)
+
+@main("${2:Title}") {
+	
+	<script type="text/javascript">
+	</script>
+} 
+]]></content>
+    <tabTrigger>template</tabTrigger>
+    <scope>source.scala.html</scope>
+</snippet>
