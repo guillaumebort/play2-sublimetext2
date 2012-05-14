@@ -1,0 +1,81 @@
+<snippet>
+    <content><![CDATA[
+package models
+
+import anorm._ 
+import play.api.db._
+import anorm.SqlParser._
+import play.api.Play.current
+
+case class ${1:Model}( id: Long = -1L )
+
+class Enhanced${1:Model}( model: ${1:Model} ) {
+
+    def save() = ${1:Model}.save( model )
+
+    def delete() = ${1:Model}.delete( model.id )
+
+    def exists() = ${1:Model}.exists( model ) 
+}
+
+object ${1:Model} {
+
+    implicit def Model2EnhancedModel( model: ${1:Model} ) = new EnhancedModel( model )
+
+    val simple = {
+        get[Long]( "${1:Model}.id" ) map {  // use like ~ get[String]("${1:Model}.url")
+            case id => ${1:Model}( id ) // use like case id ~ url => ${1:Model}( id, url ) 
+        }
+    }
+
+    def findAll() = DB.withConnection { implicit connection =>
+        SQL( "select * from ${1:Model}" ).as( ${1:Model}.simple * )
+    }
+
+    def findById( id:Long ) = DB.withConnection { implicit connection =>
+        SQL( "select * from ${1:Model} s where s.id = {id}" ).on( "id" -> id ).as( ${1:Model}.simple.singleOpt )
+    } 
+
+    def create( model: ${1:Model} ) = DB.withConnection { implicit connection =>
+        val id: Long = ${1:Model}.nextId()
+        SQL( "insert into ${1:Model} values ( {id} )" ).on( "id" -> id ).executeUpdate()
+        ( id, ${1:Model}( id, model.url ) )
+    }
+
+    def save( model:${1:Model} ) = {
+        if ( ${1:Model}.findById( model.id ).isDefined ) {
+            ${1:Model}.update( model.id, model )
+        } else {
+            ${1:Model}.create( model )._2
+        }
+    }
+
+    def delete( id: Long ) = DB.withConnection { implicit connection =>
+        SQL( "delete from ${1:Model} where id = {id}" ).on( "id" -> id ).executeUpdate()
+    }
+
+    def deleteAll() = DB.withConnection { implicit connection =>
+        SQL( "delete from ${1:Model}" ).executeUpdate()
+    }
+
+    def update( id: Long, model: ${1:Model} ) = DB.withConnection { implicit connection =>
+        SQL( "update ${1:Model} set $2 where id = {id}" ).on( "id"-> id ).executeUpdate()
+        ${1:Model}( id, model.url )
+    }
+
+    def count() = DB.withConnection { implicit connection => 
+        val firstRow = SQL( "select count(*) as s from ${1:Model}" ).apply().head 
+        firstRow[Long]( "s" )
+    }
+
+    def nextId() = DB.withConnection { implicit connection =>
+        SQL( "select next value for ${1:Model}_seq" ).as( scalar[Long].single )
+    }
+
+    def exists( id: Long ) = ${1:Model}.findById( id ).isDefined
+    def exists( model: ${1:Model} ) = ${1:Model}.findById( model.id ).isDefined
+}
+]]></content>
+    <tabTrigger>model</tabTrigger>
+    <scope>source.scala</scope>
+</snippet>
