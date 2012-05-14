@@ -1,0 +1,8 @@
+<snippet>
+	<content><![CDATA[
+val base = ${1:current}.configuration.getString( ${2:"stuff"} )
+    .getOrElse( ${3:"orstuff"} )
+]]></content>
+	<tabTrigger>fromconf</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>
