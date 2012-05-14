@@ -1,0 +1,19 @@
+<snippet>
+	<content><![CDATA[
+def ${1:sse}() = Action { implicit request =>
+    SimpleResult(
+        header = ResponseHeader(
+            OK, 
+            Map(
+                CONTENT_LENGTH -> "-1",
+                CONTENT_TYPE -> "text/event-stream"
+                )
+            ), 
+            ${2:hub}.getPatchCord().through( Enumeratee.map[${3:String}] { msg => "data: " + msg + "\n\n" } 
+        )
+    )
+}
+]]></content>
+	<tabTrigger>sse</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>

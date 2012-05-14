@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+def ${1:websocket}() = WebSocket.async[${2:String}] { request =>
+    var out = ${3:hub}.getPatchCord( )
+    var in = Iteratee.foreach[${2:String}] ( _ match {
+        case message : ${2:String} => {
+            hubEnumerator.push( message )
+        }
+    })
+    Promise.pure( ( in, out ) )
+}
+]]></content>
+	<tabTrigger>websocket</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>
