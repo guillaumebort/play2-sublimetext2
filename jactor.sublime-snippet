@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+ActorRef ${1:myActor} = Akka.system().actorOf(new Props(${2:MyActor}.class), "${1:myActor}");
+]]></content>
+	<tabTrigger>actor</tabTrigger>
+	<scope>source.java</scope>
+</snippet>

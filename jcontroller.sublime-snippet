@@ -1,0 +1,35 @@
+<snippet>
+	<content><![CDATA[
+package controllers;
+
+import play.*;
+import play.mvc.*;
+import play.data.*;
+import play.libs.*;
+import com.avaje.ebean.*;
+import play.db.ebean.*;
+import models.*;
+import play.data.validation.*;
+import static play.data.validation.Constraints.*;
+import javax.validation.*;
+import views.html.*;
+import java.util.*;
+import play.cache.*;
+
+/** Uncomment the following lines as needed **/
+/**
+import akka.util.*;
+import akka.actor.*;
+import static play.libs.F.*;
+import java.util.concurrent.*;
+**/
+
+public class ${1:Application} extends Controller {
+
+	$2
+
+}
+]]></content>
+	<tabTrigger>controller</tabTrigger>
+	<scope>source.java</scope>
+</snippet>

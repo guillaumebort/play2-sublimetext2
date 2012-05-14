@@ -1,0 +1,26 @@
+<snippet>
+    <content><![CDATA[
+Promise<${2:String}> ${1:promise} = Akka.future(
+	new Callable<${2:String}>() {
+        public ${2:String} call() {
+            return ${3:/** blocking stuff **/};
+        }
+    }
+);
+return async(
+    ${1:promise}.map(
+        new Function<${2:String},Result>() {
+            public Result apply(${2:String} result) {
+                return ok( views.html.${3:index}.render($4) );
+            } 
+      	}
+    )
+);
+]]></content>
+    <tabTrigger>async</tabTrigger>
+    <scope>source.java</scope>
+</snippet>
+
+
+
+

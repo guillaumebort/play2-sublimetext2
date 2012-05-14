@@ -1,0 +1,11 @@
+<snippet>
+	<content><![CDATA[
+public static class ${1:Login}Form {
+        
+    public ${2:String} ${3:email};
+    public ${4:String} ${5:password};        
+}	
+]]></content>
+	<tabTrigger>form</tabTrigger>
+	<scope>source.java</scope>
+</snippet>

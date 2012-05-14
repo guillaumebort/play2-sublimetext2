@@ -1,0 +1,28 @@
+<snippet>
+    <content><![CDATA[
+package models;
+
+import java.util.*;
+import javax.persistence.*;
+import play.db.ebean.*;
+import play.data.format.*;
+import play.data.validation.*;
+import static play.data.validation.Constraints.*;
+import javax.validation.*;
+import java.collection.*;
+import com.avaje.ebean.*;
+
+@Entity 
+public class ${1:Model} extends Model {
+
+    @Id @GeneratedValue(strategy = GenerationType.AUTO) public Long id;
+
+    public static Finder<Long, ${1:Model}> find = 
+    	new Finder<Long, ${1:Model}>(Long.class, ${1:Model}.class);
+
+	public ${1:Model}() {}
+}
+]]></content>
+    <tabTrigger>entity</tabTrigger>
+    <scope>source.java</scope>
+</snippet>

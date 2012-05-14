@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+${1:String} ${2:item} = Cache.get("${3:item.key}");
+]]></content>
+	<tabTrigger>cacheget</tabTrigger>
+	<scope>source.java</scope>
+</snippet>
