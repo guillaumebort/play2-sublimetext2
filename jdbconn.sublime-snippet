@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+Connection connection = DB.getConnection();
+]]></content>
+	<tabTrigger>dbconn</tabTrigger>
+	<scope>source.java</scope>
+</snippet>
