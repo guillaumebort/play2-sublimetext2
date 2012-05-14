@@ -1,0 +1,17 @@
+<snippet>
+    <content><![CDATA[
+Akka.system().scheduler().schedule(
+    	Duration.create(0, TimeUnit.MILLISECONDS), 
+    	Duration.create(${1:10}, TimeUnit.${2:SECONDS}),
+    new Runnable() {
+        public void run() {
+            $3
+        }
+    }
+);
+]]></content>
+    <tabTrigger>schedule</tabTrigger>
+    <scope>source.java</scope>
+</snippet>
+
+
