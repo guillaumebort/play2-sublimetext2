@@ -1,0 +1,14 @@
+<snippet>
+    <content><![CDATA[
+val ${1:promise} = Akka.future { ${2:/** blocking stuff **/} }
+Async {
+    ${1:promise}.map { ${3:result} => Ok( views.html.${4:index}(${3:result}) ) }
+}
+]]></content>
+    <tabTrigger>async</tabTrigger>
+    <scope>source.scala</scope>
+</snippet>
+
+
+
+

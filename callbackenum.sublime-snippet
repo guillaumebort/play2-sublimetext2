@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+val ${1:enumerator} = Enumerator.fromCallback{ () =>
+    Promise.timeout( Some( ${2:"stuff"} ), ${3:1000}, TimeUnit.${4:MILLISECONDS} )
+} 
+]]></content>
+	<tabTrigger>callbackenum</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>

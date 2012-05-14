@@ -1,0 +1,12 @@
+<snippet>
+	<content><![CDATA[
+${1:form}.bindFromRequest.fold (
+    formWithErrors => BadRequest( ${2:"You need to pass a 'xxx' value!"} ),
+    { maybeValue =>
+        ${3:Ok}
+    }
+)		
+]]></content>
+	<tabTrigger>bindform</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>
