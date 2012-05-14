@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+DB.withTransaction { implicit conn =>
+    $1
+}
+]]></content>
+	<tabTrigger>dbtrans</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>
