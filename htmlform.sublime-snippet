@@ -1,0 +1,13 @@
+<snippet>
+    <content><![CDATA[
+@helper.form(action = routes.Application.${1:index}($2)) {
+    
+    @helper.inputText(${3:myForm}("${4:key}"))
+        
+}
+]]></content>
+    <tabTrigger>pform</tabTrigger>
+    <scope>source.scala.html</scope>
+</snippet>
+
+
