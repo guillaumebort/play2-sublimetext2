@@ -7,7 +7,7 @@
 }
 ]]></content>
     <tabTrigger>pform</tabTrigger>
-    <scope>source.scala.html</scope>
+    <scope>text.html - source</scope>
 </snippet>
 
 

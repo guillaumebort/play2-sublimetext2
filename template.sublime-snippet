@@ -9,5 +9,5 @@
 } 
 ]]></content>
     <tabTrigger>template</tabTrigger>
-    <scope>source.scala.html</scope>
+    <scope>text.html - source</scope>
 </snippet>
