@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+status(${1:000}, ${3:""});
+]]></content>
+	<tabTrigger>status</tabTrigger>
+	<scope>source.java</scope>
+</snippet>

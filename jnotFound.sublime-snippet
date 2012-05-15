@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+notFound$($2);
+]]></content>
+	<tabTrigger>notfound</tabTrigger>
+	<scope>source.java</scope>
+</snippet>

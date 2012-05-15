@@ -4,6 +4,7 @@ package controllers;
 
 import play.*;
 import play.mvc.*;
+import static play.mvc.Results.*;
 import play.data.*;
 import play.libs.*;
 import com.avaje.ebean.*;
