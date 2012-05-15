@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+Ok( views.html.${1:index}($2) ).flashing(
+  "${3:item.key}" -> "${4:value}"
+)
+]]></content>
+	<tabTrigger>flashset</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>
