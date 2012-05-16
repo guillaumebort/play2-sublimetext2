@@ -1,0 +1,9 @@
+<snippet>
+	<content><![CDATA[
+def ${1:comet}() = Action {
+    Ok.stream( ${2:stream} &> Comet(callback = "parent.${3:cometMessage}") )
+}
+]]></content>
+	<tabTrigger>comet</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>

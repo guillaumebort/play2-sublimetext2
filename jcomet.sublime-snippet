@@ -1,0 +1,18 @@
+<snippet>
+	<content><![CDATA[
+public static Result ${1:comet}() {
+    Comet comet = new Comet("parent.${2:cometMessage}") {
+        public void onConnected() {
+            sendMessage("value1");
+            sendMessage("value2");
+            sendMessage("value3");
+            close();
+        }
+    };
+    // comet.sendMessage("message"); // if socket not closed
+    return ok(comet);
+}
+]]></content>
+	<tabTrigger>comet</tabTrigger>
+	<scope>source.java</scope>
+</snippet>
