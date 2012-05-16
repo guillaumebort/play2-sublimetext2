@@ -7,20 +7,16 @@ import play.api.db._
 import anorm.SqlParser._
 import play.api.Play.current
 
-case class ${1:Model}( id: Long = -1L )
+case class ${1:Model}( id: Long = -1L ) {
 
-class Enhanced${1:Model}( model: ${1:Model} ) {
+    def save() = ${1:Model}.save( this )
 
-    def save() = ${1:Model}.save( model )
+    def delete() = ${1:Model}.delete( id )
 
-    def delete() = ${1:Model}.delete( model.id )
-
-    def exists() = ${1:Model}.exists( model ) 
+    def exists() = ${1:Model}.exists( this ) 
 }
 
 object ${1:Model} {
-
-    implicit def ${1:Model}2Enhanced${1:Model}( model: ${1:Model} ) = new Enhanced${1:Model}( model )
 
     val simple = {
         get[Long]( "${2:model}.id" ) map {  // use ~ get[String]("${2:model}.stuff")
