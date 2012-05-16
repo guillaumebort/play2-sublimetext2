@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+Status(${1:000})${2:(${3:""})}
+]]></content>
+	<tabTrigger>status</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>
