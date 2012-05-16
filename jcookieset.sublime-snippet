@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+response().setCookie("${1:item.key}", "${2:value}");
+]]></content>
+	<tabTrigger>cookieset</tabTrigger>
+	<scope>source.java</scope>
+</snippet>
