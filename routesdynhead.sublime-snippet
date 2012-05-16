@@ -1,6 +1,6 @@
 <snippet>
 	<content><![CDATA[
-HEAD   /${1:resource}/:{2:id}              controllers.Application.${1:resource}(${2:id} : ${3:String})
+HEAD   /${1:resource}/:${2:id}              controllers.Application.${1:resource}(${2:id} : ${3:String})
 ]]></content>
 	<tabTrigger>rdynhead</tabTrigger>
 </snippet>
