@@ -9,7 +9,7 @@ public static Result ${1:comet}() {
             close();
         }
     };
-    ok(comet);
+    return ok(comet);
 }
 ]]></content>
 	<tabTrigger>comet</tabTrigger>
