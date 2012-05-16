@@ -9,6 +9,7 @@ public static Result ${1:comet}() {
             close();
         }
     };
+    // comet.sendMessage("message"); // if socket not closed
     return ok(comet);
 }
 ]]></content>
