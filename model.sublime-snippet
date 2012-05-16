@@ -23,22 +23,23 @@ object ${1:Model} {
     implicit def ${1:Model}2Enhanced${1:Model}( model: ${1:Model} ) = new Enhanced${1:Model}( model )
 
     val simple = {
-        get[Long]( "${1:Model}.id" ) map {  // use like ~ get[String]("${1:Model}.url")
-            case id => ${1:Model}( id ) // use like case id ~ url => ${1:Model}( id, url ) 
+        get[Long]( "${2:model}.id" ) map {  // use ~ get[String]("${2:model}.stuff")
+            case id => ${1:Model}( id ) // use case id ~ stuff => ${1:Model}( id, stuff ) 
         }
     }
 
     def findAll() = DB.withConnection { implicit connection =>
-        SQL( "select * from ${1:Model}" ).as( ${1:Model}.simple * )
+        SQL( "select * from ${2:model}" ).as( ${1:Model}.simple * )
     }
 
     def findById( id:Long ) = DB.withConnection { implicit connection =>
-        SQL( "select * from ${1:Model} s where s.id = {id}" ).on( "id" -> id ).as( ${1:Model}.simple.singleOpt )
+        SQL( "select * from ${2:model} s where s.id = {id}" ).on( "id" -> id ).as( ${1:Model}.simple.singleOpt )
     } 
 
     def create( model: ${1:Model} ) = DB.withConnection { implicit connection =>
         val id: Long = ${1:Model}.nextId()
-        SQL( "insert into ${1:Model} values ( {id} )" ).on( "id" -> id ).executeUpdate()
+        $3/** TODO : update the SQL req below to match your case class structure **/
+        SQL( "insert into ${2:model} values ( {id} )" ).on( "id" -> id ).executeUpdate()
         ( id, ${1:Model}( id ) )
     }
 
@@ -51,26 +52,26 @@ object ${1:Model} {
     }
 
     def delete( id: Long ) = DB.withConnection { implicit connection =>
-        SQL( "delete from ${1:Model} where id = {id}" ).on( "id" -> id ).executeUpdate()
+        SQL( "delete from ${2:model} where id = {id}" ).on( "id" -> id ).executeUpdate()
     }
 
     def deleteAll() = DB.withConnection { implicit connection =>
-        SQL( "delete from ${1:Model}" ).executeUpdate()
+        SQL( "delete from ${2:model}" ).executeUpdate()
     }
 
     def update( id: Long, model: ${1:Model} ) = DB.withConnection { implicit connection =>
         /** TODO : update the SQL req below to match your case class structure **/
-        ${2://}SQL( "update ${1:Model} set stuff = {stuffvalue} where id = {id}" ).on( "id"-> id, "stuffvalue" -> "value" ).executeUpdate()
+        ${4://}SQL( "update ${2:model} set stuff = {stuffvalue} where id = {id}" ).on( "id"-> id, "stuffvalue" -> "value" ).executeUpdate()
         ${1:Model}( id )
     }
 
     def count() = DB.withConnection { implicit connection => 
-        val firstRow = SQL( "select count(*) as s from ${1:Model}" ).apply().head 
+        val firstRow = SQL( "select count(*) as s from ${2:model}" ).apply().head 
         firstRow[Long]( "s" )
     }
 
     def nextId() = DB.withConnection { implicit connection =>
-        SQL( "select next value for ${1:Model}_seq" ).as( scalar[Long].single )
+        SQL( "select next value for ${5:${2:model}_seq}" ).as( scalar[Long].single )
     }
 
     def exists( id: Long ) = ${1:Model}.findById( id ).isDefined
