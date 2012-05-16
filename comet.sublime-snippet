@@ -1,7 +1,7 @@
 <snippet>
 	<content><![CDATA[
 def ${1:comet}() = Action {
-    Ok.stream( ${2:hub}.getPatchCord() &> Comet(callback = "parent.${3:cometMessage}") )
+    Ok.stream( ${2:stream} &> Comet(callback = "parent.${3:cometMessage}") )
 }
 ]]></content>
 	<tabTrigger>comet</tabTrigger>
