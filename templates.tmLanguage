@@ -1509,10 +1509,12 @@
 					<key>include</key>
 					<string>#scala-block</string>
 				</dict>
+				<!-- circular dependency? see line 220.
 				<dict>
 					<key>include</key>
 					<string>#call-block-continuation</string>
 				</dict>
+				-->
 				<dict>
 					<key>include</key>
 					<string>#call-continuation</string>
