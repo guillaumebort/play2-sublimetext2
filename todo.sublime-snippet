@@ -1,0 +1,7 @@
+<snippet>
+	<content><![CDATA[
+def ${1:index}${2:($3)} = TODO
+]]></content>
+	<tabTrigger>todo</tabTrigger>
+	<scope>source.scala</scope>
+</snippet>

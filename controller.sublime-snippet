@@ -19,7 +19,7 @@ import play.api.cache._
 import play.api.libs.json._
 **/
 
-object ${1:Application} extends Controller {
+object ${1:${TM_FILENAME/(.*)\.scala/$1/}} extends Controller {
 
   $2
 
