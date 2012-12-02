@@ -9,7 +9,6 @@ import play.data.format.*;
 import play.data.validation.*;
 import static play.data.validation.Constraints.*;
 import javax.validation.*;
-import java.collection.*;
 import com.avaje.ebean.*;
 
 @Entity 
