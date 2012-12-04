@@ -20,7 +20,7 @@
 		</dict>
 		<dict>
 			<key>begin</key>
-			<string>(?&lt;=\A)(GET|POST|PUT|PATCH|DELETE|HEAD|-&gt;)</string>
+			<string>(?&lt;=\A)(GET|POST|PUT|PATCH|DELETE|HEAD|OPTIONS|-&gt;)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
