@@ -49,6 +49,17 @@ Currently optimized for the __Dawn__ theme.
 
 ## Installation instructions : 
 
+### Cross Platform Via [Sublime Package Control](http://wbond.net/sublime_packages/package_control)
+
+Click: 
+    
+    Tools > Command Palette...
+
+Type:
+    
+    Install Package
+    Play 2.0
+
 ### Mac 
 
     $ cd ~/Library/Application\ Support/Sublime\ Text\ 2/Packages/
@@ -67,3 +78,15 @@ Currently optimized for the __Dawn__ theme.
 
     Copy the directory to: "C:\Documents and Settings\<username>\Application Data\Sublime Text 2\Packages"
 
+## Zen Coding tab completion in *.scala.html
+
+Add the scope `text.play` to the comma separated list under the expand_zen_abbreviation_on_tab key binding in the ZenCoding `Default.sublime-keymap`:
+
+    ...
+    {
+    "keys": ["tab"], "command": "expand_zen_abbreviation_on_tab", "context":
+	[
+		{ "key": "selector", "operator": "equal", "operand": "text.play, source.css - source.css.embedded, text.xml, text.xsl, text.html -source -meta.tag, meta.scope.between-tag-pair.html -source", "match_all": true },
+    ...
+
+in `Packages/ZenCoding/Default.sublime-keymap`
