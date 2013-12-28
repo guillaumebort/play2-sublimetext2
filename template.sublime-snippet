@@ -9,5 +9,5 @@
 } 
 ]]></content>
     <tabTrigger>template</tabTrigger>
-    <scope>text.html - source</scope>
+    <scope>text.play - source</scope>
 </snippet>
