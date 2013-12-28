@@ -5,5 +5,5 @@
 }
 ]]></content>
     <tabTrigger>pforeach</tabTrigger>
-    <scope>text.html - source</scope>
+    <scope>text.play - source</scope>
 </snippet>
