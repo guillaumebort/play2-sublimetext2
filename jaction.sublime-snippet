@@ -2,7 +2,7 @@
 	<content><![CDATA[
 public static Result ${1:index}($2) {
     return ok(
-        views.html.${1:index}.render($3)
+        ${1:index}.render($3)
     );
 }
 ]]></content>
