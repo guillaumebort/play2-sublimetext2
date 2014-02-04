@@ -1,0 +1,6 @@
+<snippet>
+	<content><![CDATA[
+DELETE   /${1:resource}              controllers.Application.${1:resource}($2)
+]]></content>
+	<tabTrigger>rdel</tabTrigger>
+</snippet>
